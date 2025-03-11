@@ -13,8 +13,8 @@
     <label for="nombre">nombre</label>
     <input type="text" name="nombre" id="nombre" required >
 
-    <label for="dirección">dirección</label>
-    <input type="text" name="dirección" id="dirección" required >
+    <label for="direccion">direccion</label>
+    <input type="text" name="direccion" id="direccion" required >
 
     <label for="celular">celular</label>
     <input type="number" name="celular" id="celular" required >
