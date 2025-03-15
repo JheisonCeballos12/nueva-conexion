@@ -59,7 +59,7 @@ input[type="number"]:focus {
 }
 
 /* Botón de guardar */
-input[type="submit"] {
+input button[type="submit"] {
     width: 100%;
     padding: 0.8rem;
     background-color: #007bff;
@@ -90,4 +90,19 @@ input[type="submit"]:hover {
     input[type="submit"] {
         padding: 0.6rem;
     }
+}
+
+/* Estilos para la notificación */
+.notificacion {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }

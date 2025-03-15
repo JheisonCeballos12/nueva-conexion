@@ -16,17 +16,17 @@ if (isset($_POST['nombre']) && isset($_POST['direccion']) && isset($_POST['celul
 
     //consulta SGL para insertar datos en la tabla "personas"
     //Construcción de la consulta SQL
-    {$sql="INSERT INTO company (nombre, direccion, celular) VALUES ('$nombre', '$direccion', '$celular')";} //Esta consulta SQL inserta los datos en la tabla company.
+    {$sql="INSERT INTO company (nombre, direccion, celular) 
+           VALUES ('$direccion', '$nombre', '$celular')";} //Esta consulta SQL inserta los datos en la tabla company.
                                                                                                             //El error más notable aquí es el uso de direccion con tilde en el nombre del campo de la base de datos. En SQL, los nombres de columnas no deben contener caracteres especiales como ñ o tildes.
-
      //Ejecutar la consulta y redirigir                                                                                                       
-    if ($conn->query($sql) === TRUE) { //query($sql) ejecuta la consulta SQL en la base de datos.
-
-    //echo "registro insertado exitosamente";
-    header("location: ../index.php"); //Si la consulta se ejecuta correctamente, se redirige al usuario a index.php.
+    if ($conn->query($sql) === TRUE) { 
+        header("Location: ../index.php?mensaje=guardado"); // Envía el mensaje en la URL
+        exit();
     } else {
-        echo"error:" . $sql . "<br>" . $conn->error; //Si hay un error, se muestra un mensaje de error junto con la consulta SQL que falló.
-    }
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }                                                                              // conn error tipo de error
+                                                     
 }
 
 //cerrar la conexion a la base de datos

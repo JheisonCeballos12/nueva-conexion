@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="notificacion.js"></script>
+    
 </head>
 <body>
+
+<!-- Notificación flotante -->
+<div id="notificacion" class="notificacion"></div>
 
 <form action="controladores\company.php"method="post" >
     <h1>company</h1>
@@ -19,7 +24,7 @@
     <label for="celular">celular</label>
     <input type="number" name="celular" id="celular" required >
     
-    <input type="submit" value="guardar">
+    <button class="btn btn-success w-100" type="submit"> guardar </button>
 </form>
 
 <form action="controladores/marcas.php"method="post" >
@@ -37,7 +42,8 @@
     
     <input type="submit" value="guardar">
 </form>
-    
-    
+
+
+
 </body>
 </html>
